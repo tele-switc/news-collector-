@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>外刊聚合 · 2025+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link href="./assets/styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div class="titles">
+        <h1>外刊聚合 · 2025+</h1>
+        <p class="sub">每天 08:00（北京时间）自动更新 · WIRED · The Economist · Scientific American · The Atlantic · NYTimes · WSJ</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="filters">
+      <label><input type="checkbox" class="src" value="WIRED" checked> WIRED</label>
+      <label><input type="checkbox" class="src" value="The Economist" checked> The Economist</label>
+      <label><input type="checkbox" class="src" value="Scientific American" checked> Scientific American</label>
+      <label><input type="checkbox" class="src" value="The Atlantic" checked> The Atlantic</label>
+      <label><input type="checkbox" class="src" value="The New York Times" checked> NYTimes</label>
+      <label><input type="checkbox" class="src" value="The Wall Street Journal" checked> WSJ</label>
+    </div>
+    <div class="searchbar"><input id="q" type="search" placeholder="搜索 标题/摘要/作者（英文）…"></div>
+    <div class="months"><select id="monthSelect"></select></div>
+  </section>
+
+  <main id="list" class="grid"></main>
+
+  <footer class="site-footer">
+    <p>仅在授权范围内展示全文；否则仅展示元数据并跳转原文。版权归出版方所有。</p>
+  </footer>
+
+  <!-- 阅读器 Modal -->
+  <div id="reader" class="reader hidden" aria-hidden="true">
+    <div class="reader__backdrop"></div>
+    <div class="reader__panel">
+      <button class="reader__close" aria-label="关闭">×</button>
+      <article class="reader__content">
+        <h2 id="rd-title"></h2>
+        <div id="rd-meta" class="meta"></div>
+        <div id="rd-actions" class="actions"></div>
+        <div id="rd-body" class="article"></div>
+      </article>
+    </div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
